@@ -1,0 +1,211 @@
+{
+	"info": {
+		"_postman_id": "11423b3e-6af5-4f20-9bae-3f414256f00a",
+		"name": "CDND-Capstone User 01",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Movies",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://{{apiHost}}.execute-api.us-east-2.amazonaws.com/dev/movies",
+					"protocol": "https",
+					"host": [
+						"{{apiHost}}",
+						"execute-api",
+						"us-east-2",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"dev",
+						"movies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Movie",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"title\": \"Avengers: Endgame\",\r\n\t\"year\": 2019,\r\n\t\"imdbRating\": 8.4,\r\n\t\"streamingAt\": [\"Hotstar\"],\r\n    \"cast\": [\"Robert Downey Jr.\", \"Chris Evans\", \"Mark Ruffalo\", \"Chris Hemsworth\", \"Scarlett Johansson\"]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://{{apiHost}}.execute-api.us-east-2.amazonaws.com/dev/movies",
+					"protocol": "https",
+					"host": [
+						"{{apiHost}}",
+						"execute-api",
+						"us-east-2",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"dev",
+						"movies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Movie",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"imdbRating\": 9.0,\n\t\"watched\": true\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://{{apiHost}}.execute-api.us-east-2.amazonaws.com/dev/movies/:movieId",
+					"protocol": "https",
+					"host": [
+						"{{apiHost}}",
+						"execute-api",
+						"us-east-2",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"dev",
+						"movies",
+						":movieId"
+					],
+					"variable": [
+						{
+							"key": "movieId",
+							"value": "7185fa3f-16e7-4b1c-95a6-60ca81377c0d"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Movie",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://{{apiHost}}.execute-api.us-east-2.amazonaws.com/dev/movies/:movieId",
+					"protocol": "https",
+					"host": [
+						"{{apiHost}}",
+						"execute-api",
+						"us-east-2",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"dev",
+						"movies",
+						":movieId"
+					],
+					"variable": [
+						{
+							"key": "movieId",
+							"value": "7185fa3f-16e7-4b1c-95a6-60ca81377c0d"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Generate Image URL",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://{{apiHost}}.execute-api.us-east-2.amazonaws.com/dev/movies/:movieId/image",
+					"protocol": "https",
+					"host": [
+						"{{apiHost}}",
+						"execute-api",
+						"us-east-2",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"dev",
+						"movies",
+						":movieId",
+						"image"
+					],
+					"variable": [
+						{
+							"key": "movieId",
+							"value": "7185fa3f-16e7-4b1c-95a6-60ca81377c0d"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{AuthToken}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "ee1dcf79-94b8-40ea-ae54-0dfe266c1021",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "cd54eb05-a854-4f6d-b4ca-f9232081e961",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "e4835e2c-75bc-47d9-8071-d087006b0745",
+			"key": "apiHost",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"id": "b920b51d-702b-4aba-a083-3a3e4131a179",
+			"key": "AuthToken",
+			"value": "",
+			"type": "string"
+		}
+	],
+	"protocolProfileBehavior": {}
+}
