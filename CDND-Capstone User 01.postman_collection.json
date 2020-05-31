@@ -195,15 +195,15 @@
 	],
 	"variable": [
 		{
-			"id": "e4835e2c-75bc-47d9-8071-d087006b0745",
+			"id": "b93be87a-3b54-4ffd-b639-8c6a9eb73e1a",
 			"key": "apiHost",
-			"value": "",
+			"value": "qnbcndxle0",
 			"type": "string"
 		},
 		{
-			"id": "b920b51d-702b-4aba-a083-3a3e4131a179",
+			"id": "957a17ba-4d4e-419d-b537-8fed7cdfd197",
 			"key": "AuthToken",
-			"value": "",
+			"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkszSHd6RmptcF9xSUxRdmhuWVprcCJ9.eyJpc3MiOiJodHRwczovL3J5LWZzbmQuYXV0aDAuY29tLyIsInN1YiI6ImF1dGgwfDVlZDNjMzRiYmViNjg0MGM5Mzk4NjAwNiIsImF1ZCI6IkdGck1GbXlIVlJwWmxTcmpnRGFTVDJlVWE1WkltdHNlIiwiaWF0IjoxNTkwOTQwMDAzLCJleHAiOjE1OTEwMjY0MDMsImF0X2hhc2giOiJkeEdhN01jSVJSOXc3QzZwOXNPTnJBIiwibm9uY2UiOiJzNHc1VkJiZzdxM1RQeElhaGFuaGl6R2VJM1g2ZlJtbiJ9.Fy_ags-BN-f-CVBvsTnXQkmidYjamW7qF21UPqnzdnTTCnPDxFs3d-rYc5jG81TCX68HdOhsC71FmJQw5UD_HcFrtfaqVx0ivQPtYDJeIYjXzFESmmEJiGukqHVOtjC7SEh90s4kXfk-absQWd5saHCteh9ny8YRJuEhQgObjObcyIppFujnwv4UVbN4DQTPVBWI6aGnav3k8w-_N4yRWC5_XlZTHY-FBK1BUMq-_tKqEMcSViGS68-5EfMk8rKjW52LtlcyCyHormQLDYXDn1Ab-UG9L_mW8ey6DUMXeCj262NGxkn_48PTQHYyFxUGlqT5pfFsHAFZP5WgpyPOjg",
 			"type": "string"
 		}
 	],
