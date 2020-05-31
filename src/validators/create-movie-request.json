@@ -1,0 +1,30 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "create_movie",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "year": {
+      "type": "number"
+    },
+    "imdbRating": {
+      "type": "number"
+    },
+    "streamingAt": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "cast": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "required": ["title", "year", "imdbRating"],
+  "additionalProperties": false
+}

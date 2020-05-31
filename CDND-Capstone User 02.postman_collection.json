@@ -1,0 +1,211 @@
+{
+	"info": {
+		"_postman_id": "d05ef3c6-ae0e-4e3a-8453-de1e1aede9a1",
+		"name": "CDND-Capstone User 02",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Movies",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://{{apiHost}}.execute-api.us-east-2.amazonaws.com/dev/movies",
+					"protocol": "https",
+					"host": [
+						"{{apiHost}}",
+						"execute-api",
+						"us-east-2",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"dev",
+						"movies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Movie",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"title\": \"Deadpool 2\",\r\n\t\"year\": 2018,\r\n\t\"imdbRating\": 7.7,\r\n\t\"streamingAt\": [\"Hotstar\"],\r\n    \"cast\": [\"Ryan Reynolds\", \"Josh Brolin\", \"Morena Baccarin\", \"Julian Dennison\"]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://{{apiHost}}.execute-api.us-east-2.amazonaws.com/dev/movies",
+					"protocol": "https",
+					"host": [
+						"{{apiHost}}",
+						"execute-api",
+						"us-east-2",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"dev",
+						"movies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Movie",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"imdbRating\": 8.0,\n\t\"watched\": true\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://{{apiHost}}.execute-api.us-east-2.amazonaws.com/dev/movies/:movieId",
+					"protocol": "https",
+					"host": [
+						"{{apiHost}}",
+						"execute-api",
+						"us-east-2",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"dev",
+						"movies",
+						":movieId"
+					],
+					"variable": [
+						{
+							"key": "movieId",
+							"value": "0b7392bd-0295-43ce-9311-ea31222443c7"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Movie",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://{{apiHost}}.execute-api.us-east-2.amazonaws.com/dev/movies/:movieId",
+					"protocol": "https",
+					"host": [
+						"{{apiHost}}",
+						"execute-api",
+						"us-east-2",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"dev",
+						"movies",
+						":movieId"
+					],
+					"variable": [
+						{
+							"key": "movieId",
+							"value": "0b7392bd-0295-43ce-9311-ea31222443c7"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Generate Image URL",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://{{apiHost}}.execute-api.us-east-2.amazonaws.com/dev/movies/:movieId/image",
+					"protocol": "https",
+					"host": [
+						"{{apiHost}}",
+						"execute-api",
+						"us-east-2",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"dev",
+						"movies",
+						":movieId",
+						"image"
+					],
+					"variable": [
+						{
+							"key": "movieId",
+							"value": "0b7392bd-0295-43ce-9311-ea31222443c7"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{AuthToken}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "82db489a-ba90-4872-9a71-c5fff3c6a6ea",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "d7a34e38-dc10-4d13-aa4a-d3925d4017a7",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "f4e8b38a-01e9-4c1e-8d69-69eaa9b9fd35",
+			"key": "apiHost",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"id": "1266703e-170f-4793-a254-6ecb34b7b605",
+			"key": "AuthToken",
+			"value": "",
+			"type": "string"
+		}
+	],
+	"protocolProfileBehavior": {}
+}

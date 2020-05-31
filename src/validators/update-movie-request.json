@@ -1,0 +1,15 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "update_movie",
+  "type": "object",
+  "properties": {
+    "imdbRating": {
+      "type": "number"
+    },
+    "watched": {
+      "type": "boolean"
+    }
+  },
+  "required": ["imdbRating", "watched"],
+  "additionalProperties": false
+}
